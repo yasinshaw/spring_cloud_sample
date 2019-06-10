@@ -13,3 +13,11 @@
 用户微服务：
 - 服务名：service-user
 - 端口号：9001
+### service-order
+订单微服务：
+- 服务名：service-order
+- 端口号：9011
+### service-product
+产品微服务：
+- 服务名：service-product
+- 端口号：9021
