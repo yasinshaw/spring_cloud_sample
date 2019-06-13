@@ -1,0 +1,22 @@
+version: '3'
+services:
+  consul:
+    image: consul
+    ports:
+      - "8500:8500"
+  service-user-1:
+    build:
+      context: service-user
+      args:
+        instanceId: service-user-1
+  service-user-2:
+    build:
+      context: service-user
+      args:
+        instanceId: service-user-2
+  service-product:
+    build: service-product
+  service-order:
+    build: service-order
+    ports:
+      - "8080:8080"
