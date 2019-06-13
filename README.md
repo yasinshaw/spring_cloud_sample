@@ -6,7 +6,7 @@
 - Spring Boot：2.1.5.RELEASE
 - Spring Cloud：Greenwich.SR1
 ## 使用
-启动命令：
+本地启动所有容器：
 ```bash
 ./start.sh
 ```
@@ -24,17 +24,16 @@
 所有微服务均运行在docker容器下。
 当前只设置了service-order的8080端口映射，如需其他端口映射请修改docker-compose.yml
 
-#### service-user
-用户微服务：service-user
+#### 用户微服务：service-user
 用户微服务启动了两个实例：
-service-user-1
-service-user-2
+- service-user-1
+- service-user-2
 
-#### service-order
-订单微服务：service-order
+详情请查看docker-compose文件
+#### 订单微服务：service-order
 可通过 http://docker:8080/hello 访问。
 
-service-order可通过feign访问**service-user**，可以通过 http://docker:8080/userHello 验证。
+service-order可通过**Feign**访问**service-user**，可以通过 http://docker:8080/userHello 验证。
 
-#### service-product
-产品微服务：service-product
+#### 产品微服务：service-product
+只有一个实例
