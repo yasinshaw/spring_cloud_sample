@@ -20,6 +20,9 @@
 服务注册中心使用Consul，可以去[官网下载](https://www.consul.io/downloads.html)
 使用默认端口号，Web界面端口是8500。
 
+### 网关
+网关使用了Spring Cloud Gateway组件，对容器外部暴露的端口号是8081。可通过 http://docker:8081/service-user/hello测试访问。
+
 ### 微服务
 所有微服务均运行在docker容器下。
 当前只设置了service-order的8080端口映射，如需其他端口映射请修改docker-compose.yml
