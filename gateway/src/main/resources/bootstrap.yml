@@ -2,5 +2,11 @@ spring:
   application:
     name: gateway
   cloud:
+    consul:
+      host: consul
+      discovery:
+        service-name: gateway
     config:
       uri: http://config:8080
+  rabbitmq:
+    host: rabbitmq
