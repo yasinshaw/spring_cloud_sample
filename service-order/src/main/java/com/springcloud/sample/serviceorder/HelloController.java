@@ -24,14 +24,18 @@ public class HelloController {
     @Value("${refreshedVal}")
     private String refreshedVal;
 
+    @Value("${refreshedToggle:false}")
+    private String refreshedToggle;
+
     @GetMapping("hello")
     public String hello() {
         return "hello, this is order service";
     }
 
-    @GetMapping("refreshedVal")
-    public String refreshedVal() {
-        return "order service refreshedVal: " + refreshedVal;
+    @GetMapping("refreshedProperty")
+    public String refreshedProperty() {
+        return String.format("refreshedVal: %s, refreshedToggle: %s",
+                refreshedVal, refreshedToggle);
     }
 
     @GetMapping("userHello")
