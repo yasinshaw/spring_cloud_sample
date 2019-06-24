@@ -2,11 +2,9 @@ spring:
   application:
     name: service-product
   cloud:
-    consul:
-      host: consul
-      discovery:
-        service-name: service-product
     config:
       uri: http://config:8080
+      retry:
+        max-attempts: 20
   rabbitmq:
     host: rabbitmq
