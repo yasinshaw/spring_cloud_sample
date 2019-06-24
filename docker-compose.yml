@@ -4,11 +4,23 @@ services:
     image: consul
     ports:
       - "8500:8500"
+  gogs:
+    image: gogs/gogs
+    volumes:
+      - gogs:/data
+    ports:
+      - "10022:22"
+      - "10080:3000"
   gateway:
     build:
       context: gateway
     ports:
-        - "8081:8080"
+      - "8081:8080"
+  config:
+    build:
+      context: config
+    ports:
+      - "8082:8080"
   service-user-1:
     build:
       context: service-user
@@ -25,3 +37,5 @@ services:
     build: service-order
     ports:
       - "8080:8080"
+volumes:
+  gogs: {}
