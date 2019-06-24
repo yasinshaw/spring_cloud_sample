@@ -5,7 +5,7 @@ services:
     ports:
       - "8500:8500"
   rabbitmq:
-    image: 3-management
+    image: rabbitmq:3-management
     ports:
       - "15672:15672"
   gogs:
@@ -15,16 +15,16 @@ services:
     ports:
       - "10022:22"
       - "10080:3000"
-  gateway:
-    build:
-      context: gateway
-    ports:
-      - "8081:8080"
   config:
     build:
       context: config
     ports:
       - "8082:8080"
+  gateway:
+    build:
+      context: gateway
+    ports:
+      - "8081:8080"
   service-user-1:
     build:
       context: service-user
