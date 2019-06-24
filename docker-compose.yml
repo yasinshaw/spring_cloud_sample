@@ -4,6 +4,10 @@ services:
     image: consul
     ports:
       - "8500:8500"
+  rabbitmq:
+    image: 3-management
+    ports:
+      - "15672:15672"
   gogs:
     image: gogs/gogs
     volumes:
