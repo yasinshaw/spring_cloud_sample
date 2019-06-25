@@ -47,7 +47,7 @@ git push -u gogs master
 输入用户名springcloud和密码springcloud。
 
 然后在仓库设置里面创建Web钩子：
-http://config:8080/actuator/refresh
+http://config:8080/myRefresh
 
 ### 微服务
 所有微服务均运行在docker容器下。

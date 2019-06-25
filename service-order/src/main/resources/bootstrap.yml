@@ -4,6 +4,7 @@ spring:
   cloud:
     config:
       uri: http://config:8080
+      fail-fast: true
       retry:
         max-attempts: 20
   rabbitmq:
