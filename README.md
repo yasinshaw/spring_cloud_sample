@@ -49,6 +49,9 @@ git push -u gogs master
 然后在仓库设置里面创建Web钩子：
 http://config:8080/myRefresh
 
+### zipkin
+zipkin是运行在docker里面的。可使用http://docker:9411访问zipkin的界面。
+
 ### 微服务
 所有微服务均运行在docker容器下。
 当前只设置了service-order的8080端口映射，如需其他端口映射请修改docker-compose.yml

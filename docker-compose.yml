@@ -8,6 +8,10 @@ services:
     image: rabbitmq:3-management
     ports:
       - "15672:15672"
+  zipkin:
+    image: openzipkin/zipkin
+    ports:
+      - "9411:9411"
   gogs:
     image: gogs/gogs
     volumes:

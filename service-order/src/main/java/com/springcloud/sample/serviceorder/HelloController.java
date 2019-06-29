@@ -18,9 +18,6 @@ public class HelloController {
     @Autowired
     UserClient userClient;
 
-    @Autowired
-    RestTemplate restTemplate;
-
     @Value("${refreshedVal}")
     private String refreshedVal;
 
@@ -41,10 +38,5 @@ public class HelloController {
     @GetMapping("userHello")
     public String user() {
         return userClient.getUserHello() + ", this is order-service";
-    }
-
-    @GetMapping("/ribbon/service-user")
-    public String ribbonService(){
-        return restTemplate.getForObject("http://service-user/hello", String.class);
     }
 }
